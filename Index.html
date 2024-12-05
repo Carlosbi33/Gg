@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De: Carlos Barrera Para: Janneth 💖</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>De: Carlos Barrera</h1>
+        <h2>Para: Janneth mi niñaa 💖</h2>
+    </header>
+
+    <div id="login" class="login-box">
+        <h3>Pista: Nuestro apodo</h3>
+        <input type="password" id="password" placeholder="Ingresa la contraseña">
+        <button onclick="togglePassword()">Mostrar/Ocultar</button>
+        <button onclick="checkPassword()">Ingresar</button>
+    </div>
+
+    <div id="content" class="container hidden">
+        <h2>Calendario de amor 💙</h2>
+        <div class="calendar" id="calendar"></div>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+    <div class="popup" id="popup">
+        <button class="close-btn" onclick="closePopup()">X</button>
+        <h3 id="popup-title"></h3>
+        <p id="popup-quote"></p>
+    </div>
+
+    <div id="hearts"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

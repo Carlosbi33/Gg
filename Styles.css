@@ -1,0 +1,154 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #000000, #003366);
+    color: #fff;
+    margin: 0;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+header {
+    padding: 20px;
+    background-color: #000;
+    color: #66ccff;
+    font-size: 18px;
+    border-bottom: 2px solid #66ccff;
+}
+
+.container {
+    padding: 20px;
+}
+
+.login-box {
+    margin: 20px auto;
+    padding: 20px;
+    background: #111;
+    border-radius: 10px;
+    max-width: 300px;
+    box-shadow: 0 0 15px rgba(102, 204, 255, 0.2);
+}
+
+.login-box input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+}
+
+.login-box button {
+    background-color: #66ccff;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.login-box button:hover {
+    background-color: #3399ff;
+}
+
+.hidden {
+    display: none;
+}
+
+.calendar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.day {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background: #002244;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.day.locked {
+    background: #555;
+    cursor: not-allowed;
+}
+
+.day:hover:not(.locked) {
+    transform: scale(1.1);
+}
+
+.day span {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #001122;
+    color: #66ccff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    width: 80%;
+    max-width: 400px;
+    z-index: 1000;
+    display: none;
+}
+
+.popup h3 {
+    margin-top: 0;
+}
+
+.popup .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #66ccff;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 999;
+    display: none;
+}
+
+.heart {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 20px solid #66ccff;
+    animation: float 5s infinite ease-in-out;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-300px);
+        opacity: 0;
+    }
+}
